@@ -94,6 +94,7 @@ def read_subject_info():
     return headers, info
 
 
+
 # %% [markdown]
 # ---
 # ## Task 2: Charting the Body Mass Index (BMI) for all participants
@@ -262,6 +263,7 @@ value = np.random.randint(1, 11, size=len(days))
 ax.plot(days, value, 'ro-')
 ax.set(ylim=[0, 11], xlabel='Date', ylabel='Value')
 plt.show()
+
 
 # %% [markdown]
 # ---
@@ -673,6 +675,7 @@ def generate_interpolated_hr(times, hr, time_delta):
     hr_interp = f(seconds_time_interp)
 
     return times_interp, hr_interp
+
     
 
 # %% [markdown]
@@ -708,8 +711,11 @@ plt.ylabel("heart rate")
 plt.xlabel("timestamps")
 plt.show()
 
+
 # %% [markdown]
-# We can see that the interpolated heart rate data captures the whole trend in the original cleaned heart rate data in general with a few extreme data points being missed.
+# ## Explanations
+# 
+# This plot is what I expected, since we can see that the interpolated heart rate data captures the whole trend in the original cleaned heart rate data in general with a few extreme data points being missed.
 # 
 # The reason why is that the case may consider that the time interval chosen is relatively large (5s), and other kinds of interpolation (cubic, quadratic) may perform better.
 
@@ -1098,7 +1104,7 @@ def read_all(subject, prc_low, prc_high, time_delta):
     plt.xlabel("times")
     plt.show()
 
-# here I take subject 8, 1% and 9% percentile, 3s as an example
+# here I take subject 8, 1% and 99% percentile, 3s as an example
 delta = np.timedelta64(3, "s")
 read_all(8,1,99,delta)
 
