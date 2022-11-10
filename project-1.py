@@ -265,6 +265,7 @@ ax.set(ylim=[0, 11], xlabel='Date', ylabel='Value')
 plt.show()
 
 
+
 # %% [markdown]
 # ---
 # 🚩 ***Task 3a:*** Write a function `read_heartbeat_data(subject)` which takes as input an integer `subject` between 1 and 10, reads the data in `heartbeats.txt` for the given `subject`, and returns it as two NumPy vectors:
